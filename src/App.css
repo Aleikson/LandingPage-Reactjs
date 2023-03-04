@@ -193,7 +193,7 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  background-color: #fff;
+  background-color: #e3e3e3;
   padding: 20px;
 }
 
