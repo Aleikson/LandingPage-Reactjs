@@ -201,3 +201,146 @@ nav {
   width: 100%;
   height: auto;
 }
+
+.primary-heading-slide{
+  font-size: clamp(2rem, 3vw, 2rem);
+  color: #4c4c4c;
+  max-width: 600px;
+  position: absolute;
+}
+
+.features-section-container{
+  margin-top: 10rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.carousel {
+  width: calc((96vw / 3) * var(--num));
+  margin: 0 0 0 calc((2vw - (96vw / 3)) - 12px);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.carousel.prev {
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  -webkit-animation-name: prev;
+  animation-name: prev;
+}
+
+.carousel.next {
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  -webkit-animation-name: next;
+  animation-name: next;
+}
+
+.carousel li {
+  padding: 50px;
+  text-align: center;
+  width: calc((96vw / 3) - 24px);
+  box-sizing: border-box;
+}
+
+.ui {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  width: calc(100% - -10px);
+  padding: 12px;
+  z-index: 100;
+  justify-content: space-around;
+}
+
+.ui button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff9a3c;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: black;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  border: 0;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.ui button:hover {
+  background: #ffc93c;
+}
+
+.ui button:focus {
+  outline: none;
+  border: 1px solid white;
+}
+
+.card {
+  box-shadow: 0px 1px 2px 0px rgba(46, 49, 52, 0.4);
+  border-radius: 4px;
+  margin: 12px;
+  background: #fff;
+}
+
+.card .material-icons {
+  font-size: 4.8rem;
+}
+
+.card p {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+@-webkit-keyframes next {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(0px + calc(96vw / 3)));
+  }
+}
+
+@keyframes next {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(0px + calc(96vw / 3)));
+  }
+}
+
+@-webkit-keyframes prev {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(0px - calc(96vw / 3)));
+  }
+}
+
+@keyframes prev {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(0px - calc(96vw / 3)));
+  }
+}
